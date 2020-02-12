@@ -1,0 +1,40 @@
+html{
+    box-sizing: border-box;
+}
+:root {
+    --gutter:20px;
+}
+
+*,*::after, * ::before{
+    background-origin: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /* padding: 0.5%; */
+    background-color: #707070;
+    /* background-image: url(./assets/space.jpg); */
+  }
+
+
+.box {
+    /* margin: 6.3%;
+   */
+    width: 20.4%;
+    height: 20.4%;
+    border-width: 1px;
+    border-style: solid;
+    border-color:white;
+    border-radius: 3.6%;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px grey;
+    background-color: black;
+
+}
