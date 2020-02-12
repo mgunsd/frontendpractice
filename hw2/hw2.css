@@ -40,4 +40,5 @@ body {
 
 .box img:hover {
     transform: scale(1.61) rotate(70deg);
+    filter: brightness(2)
 }
