@@ -6,32 +6,33 @@ html{
 }
 body {
     margin: 0;
-    padding: 0;
+    padding: 10vw;
+    background-color: #707070;
+    background-image: url("./space.jpg");
 }
 .container {
     display: flex;
     flex-flow: row wrap;
-    padding: 0.5%;
+    padding: 0.5vw;
     justify-content: center;
-    background-color: #707070;
-    background-image: url("./space.jpg");
+    
 }
 .box {
-    margin: 6.3%;
-    width: 20.4%;
-    height: 20.4%;
+    margin: 2.5vw;
+    width: 20vw;
+    height: 20vw;
     border-width: 1px;
     border-style: solid;
     border-color:white;
     border-radius: 15%;
     overflow: hidden;
     background-color: black;
-
  }
  
 .box img {
     height: 100%;
     width: 100%;
+    /* object-fit: cover; */
     display: block;
     margin: auto;
     cursor: pointer;
@@ -40,5 +41,23 @@ body {
 
 .box img:hover {
     transform: scale(1.61) rotate(70deg);
-    filter: brightness(2)
+}
+.footer{
+    margin-top:5vw;
+    text-align: center;
+    color:white;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+    font-size: small;
+}
+
+.footer a{
+    color: white;
+    background-color:rgb(28,28,30);
+    padding: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    text-align: center; 
+    border-radius: 10px;
+    text-decoration: none;
+    white-space: nowrap;
 }

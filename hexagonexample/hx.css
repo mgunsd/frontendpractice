@@ -7,6 +7,8 @@ html{
 body {
     margin: 0;
     padding: 0;
+    background-color: #707070;
+    /* background-image: url("./space.jpg"); */
 }
 .container {
     display: flex;
@@ -14,8 +16,7 @@ body {
     padding: 0.5%;
     align-items: center;
     justify-content: center;
-    background-color: #707070;
-    /* background-image: url("./space.jpg"); */
+   
 }
 
 .two{

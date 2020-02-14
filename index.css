@@ -1,0 +1,113 @@
+body {
+    height: 100%;
+    font-family:IBM Plex Mono,monospace;
+    /* font-family: -apple-system, BlinkMacSystemFont, sans-serif;  */
+    color: rgb(28,28,30);
+}
+div {
+    position: relative;
+    border-style: solid;
+    border-color: rgb(28,28,30);
+    border-width: 2px;
+}
+.label {
+    position: absolute;
+    left:1%;
+    top:-10px;
+    color: white;
+    background-color: rgb(28,28,30);
+    font-family:monospace;
+} 
+.container{
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template:
+    "header header header" 200px
+    "side main main" auto
+    "footer footer footer" auto
+    / 200px auto auto;
+}
+.header {
+    margin-top: 10px;
+    padding:10px ;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:rgb(99, 99, 102);
+}
+.header a {
+    color: white;
+    background-color:rgb(28,28,30);
+    padding: 20px;
+    margin: 20px;
+    font-weight: bold;
+    text-align: center; 
+    /* border-radius: 3px; */
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+ }
+.header a:hover{color:rgb(28,28,30); background-color: white;}
+.main{
+    grid-area: main;
+    padding: 20px;
+}
+.main p {text-align: justify;}
+.main img {
+    float: right;
+    max-width: 50%;
+    width: 400px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+.side{
+    grid-area: side;
+    padding-top: 30px;
+}
+.side h3 {text-align: center;}
+.side nav{
+    display: flex;
+    flex-direction: column;
+}
+.side a{ 
+   border-style: dotted;
+   border-width: 0.5px;
+   margin: 10px;
+   padding: 10px;
+   text-decoration: none; color: rgb(28,28,30)
+}
+.side a:hover{ color:white; background-color: rgb(28,28,30); }
+.footer{
+    grid-area: footer;
+    padding:10px;
+    text-align: center;
+}
+@media screen and (max-width:900px) {
+    .container {
+        column-gap: 0px;
+        grid-template:
+        "header" 200px
+        "main" auto
+        "side" auto
+        "footer" auto
+        / auto auto;
+    }
+    .main img {
+        float: center;
+        max-width: 100%;    }
+    .header {
+        flex-direction: column;
+        align-items:stretch;  
+    }
+    .header a {
+        padding: 10px;
+        flex: 1;
+     }
+     .hL, .hR {display: flex;	
+        }
+}

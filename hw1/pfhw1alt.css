@@ -1,0 +1,133 @@
+html{
+    box-sizing: border-box;
+}
+*,*:after, *before{
+    box-sizing: inherit;
+}
+
+/* They do that because the property of box-sizing is not inherited by default, and they want this style applied to all elements AND any pseudo-elements.
+
+FYI: These are actually pseudo-elements, and the good practice way to indicate them is with two ::'s, like this:
+
+*, *::after, *::before { box-sizing:border-box; } */
+
+body {
+    height: 100%;
+    font-family:IBM Plex Mono,monospace;
+    color: rgb(28,28,30);
+}
+div {
+    position: relative;
+    border-style: solid;
+    border-color: rgb(28,28,30);
+    border-width: 2px;
+}
+.label {
+    position: absolute;
+    left:1%;
+    top:-10px;
+    color: white;
+    background-color: rgb(28,28,30);
+    font-family:monospace;
+} 
+.container{
+    margin-top: 10px;
+    padding: 10px;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template:
+    "header header header" 200px
+    "side main main" auto
+    "footer footer footer" auto
+    / 200px auto auto;
+}
+.header {
+    margin-top: 10px;
+    padding:10px ;
+    grid-area: header;
+    background:rgb(99, 99, 102);
+    display:block ;
+}
+.menu{
+display: flex;
+padding-left: 0.2em;
+justify-content: flex-start;
+}
+.menu a {
+    color: white;
+    background-color:rgb(28,28,30);
+    padding: 20px;
+    margin: 20px;
+    font-weight: bold;
+    text-align: center; 
+    /* border-radius: 3px; */
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif; 
+ }
+.menu a:hover{color:rgb(28,28,30); background-color: white;}
+.menu :last-child{margin-left: auto;}
+.main{
+    grid-area: main;
+    padding: 20px;
+}
+.main p {text-align: justify;}
+.main img {
+    float: right;
+    max-width: 50%;
+    width: 400px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+.side{
+    grid-area: side;
+    padding-top: 30px;
+}
+.side h3 {text-align: center;}
+.side nav{
+    display: flex;
+    flex-direction: column;
+}
+.side a{ 
+   border-style: dotted;
+   border-width: 0.5px;
+   margin: 10px;
+   padding: 10px;
+   text-decoration: none; color: rgb(28,28,30)
+}
+.side a:hover{ color:white; background-color: rgb(28,28,30); }
+.footer{
+    grid-area: footer;
+    padding:10px;
+    text-align: center;
+}
+@media screen and (max-width:900px) {
+    .container {
+        column-gap: 0px;
+        grid-template:
+        "header" 200px
+        "main" auto
+        "side" auto
+        "footer" auto
+        / auto auto;
+    }
+    .main img {
+        float: center;
+        max-width: 100%;    }
+    .header {
+        flex-direction: column;
+        align-items:stretch;  
+    }
+    .menu a {
+        padding: 10px;
+        flex: 1;
+       
+     }
+     .menu last-child{
+
+     }
+     /* .hL, .hR {display: flex;	
+        } */
+}
